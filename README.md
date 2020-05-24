@@ -28,12 +28,20 @@ mvn spring-boot:run
 ```
 con este comando se inicia la aplicacion.
 
-El servicio post se encuentra en la ruta(http://localhost:8081/get)
+Es un servicio  **POST**, se encuentra alojado en la ruta(http://localhost:8081/get)
 
 Sus parametros son: {
                     "hour": " ",
                     "timezone": " "
                     }, son recibidos en el body de la peticion.
+                    ejemplo: 
+                     { "hour": "18:31:45", "timezone": "-3" }, y el resultado es: 
+                     {  
+                     	"response":{
+                     		"time":"21:31:45", 
+                     		 "timezone":"utc" 
+                     	} 
+                      } 
 
 NOTA: el parametro "timezone" puede ser un numero o una zona horaria, ejemplo: America/Caracas
                     
